@@ -29,7 +29,7 @@ const POINTS_OF_INTEREST: PointOfInterest[] = [
   {
     id: 'poi-hostel',
     name: 'Oki Doki Old Town Hostel',
-    description: '🏨 Notre logement — ul. Długa 6',
+    description: '🏨 Notre logement — Długa 6, 00-238 Warszawa',
     lat: 52.2499,
     lng: 21.0124
   },
