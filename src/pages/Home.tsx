@@ -135,6 +135,69 @@ export default function Home() {
         </section>
       </div>
 
+      {/* Section Activités */}
+      <section style={{
+        background: 'linear-gradient(135deg, #16a085 0%, #0a7c68 100%)',
+        padding: '2rem',
+        borderRadius: '12px',
+        marginTop: '2rem',
+        boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+        color: 'white'
+      }}>
+        <h2 style={{ marginBottom: '1.5rem', fontSize: '1.5rem', textAlign: 'center' }}>
+          🎯 Activités Proposées
+        </h2>
+        
+        <div style={{
+          background: 'rgba(255,255,255,0.1)',
+          padding: '1.5rem',
+          borderRadius: '12px',
+          backdropFilter: 'blur(10px)'
+        }}>
+          <h3 style={{ margin: '0 0 1rem 0', fontSize: '1.2rem' }}>
+            🍸 Musée de la Vodka Polonaise
+          </h3>
+          <p style={{ margin: '0.5rem 0', fontSize: '0.95rem', lineHeight: '1.6' }}>
+            Découvrez l'histoire de la vodka polonaise dans un bâtiment historique ! Visite interactive de 60 minutes + dégustation de 20 minutes. 
+            Explorez plus de 500 ans d'histoire de cette boisson nationale et visitez un laboratoire d'alchimiste médiéval.
+          </p>
+          <div style={{ marginTop: '1rem', display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
+            <span style={{ fontSize: '0.9rem' }}>⏱️ Durée : 80 min (visite + dégustation)</span>
+            <span style={{ fontSize: '0.9rem' }}>💰 Prix : ~70 zł (environ 16€)</span>
+          </div>
+          <div style={{ marginTop: '1rem' }}>
+            <a 
+              href="https://muzeumpolskiejwodki.pl/en/tours-and-tasting/standard/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-block',
+                background: 'white',
+                color: '#16a085',
+                padding: '0.75rem 1.5rem',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                fontWeight: 'bold',
+                fontSize: '0.95rem',
+                transition: 'transform 0.2s',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+              📍 Plus d'infos & Réservation
+            </a>
+          </div>
+          <p style={{ marginTop: '1rem', fontSize: '0.85rem', opacity: 0.9 }}>
+            ℹ️ Note : Les billets Basic ne sont pas disponibles les vendredis et samedis.
+          </p>
+        </div>
+      </section>
+
       {/* Liste des participants */}
       <section style={{
         background: 'linear-gradient(135deg, #2a5298 0%, #1e3c72 100%)',
