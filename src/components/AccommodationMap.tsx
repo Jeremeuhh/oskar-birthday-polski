@@ -43,28 +43,28 @@ const POINTS_OF_INTEREST: PointOfInterest[] = [
   {
     id: 'poi-lazienki',
     name: 'Parc Łazienki & Palais sur l\'Eau',
-    description: '🌳 Parc, paons, monument Chopin',
-    lat: 52.2151,
-    lng: 21.0362
+    description: '🌳 Parc, paons, monument Chopin — Agrykola 1',
+    lat: 52.2153,
+    lng: 21.0352
   },
   {
     id: 'poi-chateau',
     name: 'Château Royal (Zamek Królewski)',
-    description: '👑 Résidence des rois de Pologne',
+    description: '👑 Résidence des rois de Pologne — plac Zamkowy 4',
     lat: 52.2479,
     lng: 21.0153
   },
   {
     id: 'poi-palais-culture',
     name: 'Palais de la Culture et de la Science',
-    description: '🏢 Vue panoramique sur Varsovie',
+    description: '🏢 Vue panoramique sur Varsovie — pl. Defilad 1',
     lat: 52.2319,
     lng: 21.0067
   },
   {
     id: 'poi-insurrection',
     name: 'Musée de l\'Insurrection de Varsovie',
-    description: '🎭 Histoire de l\'insurrection de 1944',
+    description: '🎭 Histoire de l\'insurrection de 1944 — Grzybowska 79',
     lat: 52.2323,
     lng: 20.9811
   },
@@ -72,8 +72,8 @@ const POINTS_OF_INTEREST: PointOfInterest[] = [
     id: 'poi-praga',
     name: 'Quartier de Praga',
     description: '🎨 Street art, bars locaux, ambiance authentique',
-    lat: 52.2550,
-    lng: 21.0373
+    lat: 52.2502,
+    lng: 21.0330
   },
   {
     id: 'poi-vodka',
@@ -85,9 +85,9 @@ const POINTS_OF_INTEREST: PointOfInterest[] = [
   {
     id: 'poi-tir',
     name: 'Stand de Tir — PM Shooter',
-    description: '🔫 Package AK-47 — 225 zł',
-    lat: 52.2285,
-    lng: 21.0032
+    description: '🔫 Package AK-47 — 225 zł — Krakowiaków 80A',
+    lat: 52.1771,
+    lng: 21.0156
   }
 ]
 
