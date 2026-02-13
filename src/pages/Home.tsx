@@ -196,6 +196,58 @@ export default function Home() {
             ℹ️ Note : Les billets Basic ne sont pas disponibles les vendredis et samedis.
           </p>
         </div>
+
+        {/* Stand de Tir */}
+        <div style={{
+          background: 'rgba(255,255,255,0.1)',
+          padding: '1.5rem',
+          borderRadius: '12px',
+          backdropFilter: 'blur(10px)',
+          marginTop: '1.5rem'
+        }}>
+          <h3 style={{ margin: '0 0 1rem 0', fontSize: '1.2rem' }}>
+            🔫 Stand de Tir - PM Shooter
+          </h3>
+          <p style={{ margin: '0.5rem 0', fontSize: '0.95rem', lineHeight: '1.6' }}>
+            Expérience unique de tir avec des armes authentiques ! Le Package 1 inclut 50 tirs avec 5 armes différentes : 
+            CZ 75 (pistolet), Glock 17, AK-47 (fusil d'assaut), Colt 1911, et fusil.
+          </p>
+          <div style={{ marginTop: '1rem', display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
+            <span style={{ fontSize: '0.9rem' }}>🎯 Package 1 : 50 tirs</span>
+            <span style={{ fontSize: '0.9rem' }}>💰 Prix : 225 zł (environ 52€)</span>
+            <span style={{ fontSize: '0.9rem' }}>⭐ Inclut AK-47</span>
+          </div>
+          <div style={{ marginTop: '1rem' }}>
+            <a 
+              href="https://www.pmshooter.pl/index.php/en/arsenal"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-block',
+                background: 'white',
+                color: '#16a085',
+                padding: '0.75rem 1.5rem',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                fontWeight: 'bold',
+                fontSize: '0.95rem',
+                transition: 'transform 0.2s',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+              🎯 Voir tous les packages
+            </a>
+          </div>
+          <p style={{ marginTop: '1rem', fontSize: '0.85rem', opacity: 0.9 }}>
+            ℹ️ D'autres packages disponibles avec plus d'armes et de munitions.
+          </p>
+        </div>
       </section>
 
       {/* Liste des participants */}
