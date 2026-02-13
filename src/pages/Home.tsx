@@ -248,6 +248,71 @@ export default function Home() {
             ℹ️ D'autres packages disponibles avec plus d'armes et de munitions.
           </p>
         </div>
+
+        {/* Activités Culturelles */}
+        <div style={{
+          background: 'rgba(255,255,255,0.1)',
+          padding: '1.5rem',
+          borderRadius: '12px',
+          backdropFilter: 'blur(10px)',
+          marginTop: '1.5rem'
+        }}>
+          <h3 style={{ margin: '0 0 1rem 0', fontSize: '1.2rem' }}>
+            🏛️ Visites Culturelles - Les Incontournables de Varsovie
+          </h3>
+          
+          <div style={{ display: 'grid', gap: '1rem', marginTop: '1rem' }}>
+            <div style={{ borderLeft: '3px solid white', paddingLeft: '1rem' }}>
+              <strong style={{ fontSize: '1rem' }}>🏰 La Vieille Ville (Stare Miasto)</strong>
+              <p style={{ margin: '0.5rem 0', fontSize: '0.9rem', lineHeight: '1.5' }}>
+                Cœur historique classé UNESCO, entièrement reconstruit après la guerre. Place du marché colorée, ruelles médiévales, 
+                et la statue de la Sirène (symbole de Varsovie).
+              </p>
+            </div>
+
+            <div style={{ borderLeft: '3px solid white', paddingLeft: '1rem' }}>
+              <strong style={{ fontSize: '1rem' }}>🌳 Parc Łazienki & Palais sur l'Eau</strong>
+              <p style={{ margin: '0.5rem 0', fontSize: '0.9rem', lineHeight: '1.5' }}>
+                Le plus beau parc de Varsovie ! Palais royal sur l'eau, paons en liberté, monument à Chopin 
+                (concerts gratuits l'été).
+              </p>
+            </div>
+
+            <div style={{ borderLeft: '3px solid white', paddingLeft: '1rem' }}>
+              <strong style={{ fontSize: '1rem' }}>👑 Château Royal (Zamek Królewski)</strong>
+              <p style={{ margin: '0.5rem 0', fontSize: '0.9rem', lineHeight: '1.5' }}>
+                Ancienne résidence des rois de Pologne avec salles somptueuses et collection d'art. 
+                Marque l'entrée de la Vieille Ville.
+              </p>
+            </div>
+
+            <div style={{ borderLeft: '3px solid white', paddingLeft: '1rem' }}>
+              <strong style={{ fontSize: '1rem' }}>🏢 Palais de la Culture et de la Science</strong>
+              <p style={{ margin: '0.5rem 0', fontSize: '0.9rem', lineHeight: '1.5' }}>
+                Bâtiment emblématique (style soviétique). Monte à l'observatoire pour une vue panoramique incroyable !
+              </p>
+            </div>
+
+            <div style={{ borderLeft: '3px solid white', paddingLeft: '1rem' }}>
+              <strong style={{ fontSize: '1rem' }}>🎭 Musée de l'Insurrection de Varsovie</strong>
+              <p style={{ margin: '0.5rem 0', fontSize: '0.9rem', lineHeight: '1.5' }}>
+                Visite immersive et émouvante sur l'insurrection de 1944 contre les nazis. 
+                Essentiel pour comprendre l'histoire de la ville.
+              </p>
+            </div>
+
+            <div style={{ borderLeft: '3px solid white', paddingLeft: '1rem' }}>
+              <strong style={{ fontSize: '1rem' }}>🎨 Quartier de Praga</strong>
+              <p style={{ margin: '0.5rem 0', fontSize: '0.9rem', lineHeight: '1.5' }}>
+                Ancien quartier alternatif : street art, bars locaux, atmosphère authentique et moins touristique.
+              </p>
+            </div>
+          </div>
+
+          <p style={{ marginTop: '1.5rem', fontSize: '0.85rem', opacity: 0.9 }}>
+            💡 La plupart de ces lieux sont gratuits ou à prix très réduit. Parfait pour découvrir Varsovie !
+          </p>
+        </div>
       </section>
 
       {/* Liste des participants */}
