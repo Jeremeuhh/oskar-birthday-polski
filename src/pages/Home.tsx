@@ -103,37 +103,26 @@ export default function Home() {
         </div>
       </section>
       
-      <div className="home-layout">
-        {/* Left column: list */}
-        <section className="accommodations-list">
-          <div className="list-header">
-            <h2>🏨 Notre Logement</h2>
+      <section className="accommodations-list" style={{ marginTop: '2rem' }}>
+        <div className="list-header">
+          <h2>🏨 Notre Logement</h2>
+        </div>
+
+        {accommodations.map((a) => (
+          <div
+            key={a.id}
+            ref={(el) => { cardRefs.current[a.id] = el }}
+          >
+            <AccommodationCard
+              accommodation={a}
+              expanded={expandedId === a.id}
+              onToggle={() =>
+                setExpandedId(expandedId === a.id ? null : a.id)
+              }
+            />
           </div>
-
-          {accommodations.map((a) => (
-            <div
-              key={a.id}
-              ref={(el) => { cardRefs.current[a.id] = el }}
-            >
-              <AccommodationCard
-                accommodation={a}
-                expanded={expandedId === a.id}
-                onToggle={() =>
-                  setExpandedId(expandedId === a.id ? null : a.id)
-                }
-              />
-            </div>
-          ))}
-        </section>
-
-        {/* Right column: map */}
-        <section className="map-column">
-          <AccommodationMap
-            accommodations={accommodations}
-            onSelect={scrollToCard}
-          />
-        </section>
-      </div>
+        ))}
+      </section>
 
       {/* Section Activités */}
       <section style={{
@@ -312,6 +301,26 @@ export default function Home() {
           <p style={{ marginTop: '1.5rem', fontSize: '0.85rem', opacity: 0.9 }}>
             💡 La plupart de ces lieux sont gratuits ou à prix très réduit. Parfait pour découvrir Varsovie !
           </p>
+        </div>
+      </section>
+
+      {/* Carte de tous les lieux */}
+      <section style={{
+        background: 'linear-gradient(135deg, #2a5298 0%, #1e3c72 100%)',
+        padding: '2rem',
+        borderRadius: '12px',
+        marginTop: '2rem',
+        boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+        color: 'white'
+      }}>
+        <h2 style={{ marginBottom: '1rem', fontSize: '1.5rem', textAlign: 'center' }}>
+          🗺️ Carte de tous les lieux
+        </h2>
+        <p style={{ textAlign: 'center', marginBottom: '1rem', fontSize: '0.9rem', opacity: 0.85 }}>
+          🔵 Logement &nbsp;|&nbsp; 🔴 Activités & Visites
+        </p>
+        <div style={{ borderRadius: '12px', overflow: 'hidden', height: '450px' }}>
+          <AccommodationMap accommodations={accommodations} />
         </div>
       </section>
 

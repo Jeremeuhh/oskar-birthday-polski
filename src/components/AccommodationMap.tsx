@@ -16,12 +16,107 @@ L.Icon.Default.mergeOptions({
   shadowUrl: markerShadow,
 })
 
+// ── Points d'intérêt à afficher sur la carte ──
+interface PointOfInterest {
+  id: string
+  name: string
+  description: string
+  lat: number
+  lng: number
+}
+
+const POINTS_OF_INTEREST: PointOfInterest[] = [
+  {
+    id: 'poi-hostel',
+    name: 'Oki Doki Old Town Hostel',
+    description: '🏨 Notre logement — ul. Długa 6',
+    lat: 52.2499,
+    lng: 21.0124
+  },
+  {
+    id: 'poi-stare-miasto',
+    name: 'Vieille Ville (Stare Miasto)',
+    description: '🏰 Centre historique UNESCO — Place du Marché',
+    lat: 52.2495,
+    lng: 21.0122
+  },
+  {
+    id: 'poi-lazienki',
+    name: 'Parc Łazienki & Palais sur l\'Eau',
+    description: '🌳 Parc, paons, monument Chopin',
+    lat: 52.2151,
+    lng: 21.0362
+  },
+  {
+    id: 'poi-chateau',
+    name: 'Château Royal (Zamek Królewski)',
+    description: '👑 Résidence des rois de Pologne',
+    lat: 52.2479,
+    lng: 21.0153
+  },
+  {
+    id: 'poi-palais-culture',
+    name: 'Palais de la Culture et de la Science',
+    description: '🏢 Vue panoramique sur Varsovie',
+    lat: 52.2319,
+    lng: 21.0067
+  },
+  {
+    id: 'poi-insurrection',
+    name: 'Musée de l\'Insurrection de Varsovie',
+    description: '🎭 Histoire de l\'insurrection de 1944',
+    lat: 52.2323,
+    lng: 20.9811
+  },
+  {
+    id: 'poi-praga',
+    name: 'Quartier de Praga',
+    description: '🎨 Street art, bars locaux, ambiance authentique',
+    lat: 52.2550,
+    lng: 21.0373
+  },
+  {
+    id: 'poi-vodka',
+    name: 'Musée de la Vodka Polonaise',
+    description: '🍸 Visite + dégustation — 70 zł',
+    lat: 52.2561,
+    lng: 21.0463
+  },
+  {
+    id: 'poi-tir',
+    name: 'Stand de Tir — PM Shooter',
+    description: '🔫 Package AK-47 — 225 zł',
+    lat: 52.2285,
+    lng: 21.0032
+  }
+]
+
+// Icône personnalisée pour les points d'intérêt (rouge)
+const poiIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+  shadowUrl: markerShadow,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+})
+
+// Icône pour le logement (bleu par défaut)
+const hostelIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
+  shadowUrl: markerShadow,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+})
+
 // ── Auto-fit map bounds to markers ──
 function FitBounds({ positions }: { positions: [number, number][] }) {
   const map = useMap()
   useEffect(() => {
     if (positions.length > 0) {
-      map.fitBounds(positions, { padding: [40, 40], maxZoom: 13 })
+      map.fitBounds(positions, { padding: [40, 40], maxZoom: 14 })
     }
   }, [map, positions])
   return null
@@ -32,18 +127,18 @@ interface Props {
   onSelect?: (id: string) => void
 }
 
-// Default center: Poland
-const POLAND_CENTER: [number, number] = [51.9194, 19.1451]
+// Default center: Warsaw
+const WARSAW_CENTER: [number, number] = [52.2297, 21.0122]
 
 export default function AccommodationMap({ accommodations, onSelect }: Props) {
-  const positions = accommodations.map(
-    (a) => [a.lat, a.lng] as [number, number]
+  const allPositions = POINTS_OF_INTEREST.map(
+    (p) => [p.lat, p.lng] as [number, number]
   )
 
   return (
     <MapContainer
-      center={POLAND_CENTER}
-      zoom={6}
+      center={WARSAW_CENTER}
+      zoom={13}
       className="accommodation-map"
       scrollWheelZoom={true}
     >
@@ -51,26 +146,19 @@ export default function AccommodationMap({ accommodations, onSelect }: Props) {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <FitBounds positions={positions} />
-      {accommodations.map((a) => (
-        <Marker key={a.id} position={[a.lat, a.lng]}>
+      <FitBounds positions={allPositions} />
+
+      {/* Points d'intérêt */}
+      {POINTS_OF_INTEREST.map((poi) => (
+        <Marker 
+          key={poi.id} 
+          position={[poi.lat, poi.lng]}
+          icon={poi.id === 'poi-hostel' ? hostelIcon : poiIcon}
+        >
           <Popup>
-            <strong>{a.name}</strong>
-            {a.city && <br />}
-            {a.city && <span>📍 {a.city}</span>}
-            {a.price_per_night != null && (
-              <>
-                <br />
-                <span>{a.price_per_night} € / nuit</span>
-              </>
-            )}
+            <strong>{poi.name}</strong>
             <br />
-            <button
-              className="popup-link"
-              onClick={() => onSelect?.(a.id)}
-            >
-              Voir détails
-            </button>
+            <span>{poi.description}</span>
           </Popup>
         </Marker>
       ))}
