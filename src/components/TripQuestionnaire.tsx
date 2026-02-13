@@ -258,7 +258,7 @@ export default function TripQuestionnaire() {
 
         <div>
           <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold', color: 'white' }}>
-            ⚽ Le lundi 18 il y a un match de Legia Warsaw qui coûte 70 euros. Êtes-vous prêt à payer une telle activité ?
+            ⚽ Le samedi 18 il y a un match de Legia Warsaw qui coûte 70 euros. Êtes-vous prêt à payer une telle activité ?
           </label>
           <p style={{ fontSize: '0.9rem', color: '#aaa', marginBottom: '0.5rem' }}>
             <a 
