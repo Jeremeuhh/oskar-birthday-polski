@@ -302,6 +302,119 @@ export default function Home() {
             💡 La plupart de ces lieux sont gratuits ou à prix très réduit. Parfait pour découvrir Varsovie !
           </p>
         </div>
+
+        {/* Tournée des bars */}
+        <div style={{
+          background: 'rgba(255,255,255,0.1)',
+          padding: '1.5rem',
+          borderRadius: '12px',
+          backdropFilter: 'blur(10px)',
+          marginTop: '1.5rem'
+        }}>
+          <h3 style={{ margin: '0 0 1rem 0', fontSize: '1.2rem' }}>
+            🍻 Tournée des Bars dans la Vieille Ville
+          </h3>
+          <p style={{ margin: '0.5rem 0', fontSize: '0.95rem', lineHeight: '1.6' }}>
+            Le centre historique est parfait pour sortir le soir avec un mix de bars à vodka, pubs animés et clubs ouverts tard.
+          </p>
+          
+          <div style={{ marginTop: '1rem', display: 'grid', gap: '0.8rem' }}>
+            <div style={{ borderLeft: '3px solid rgba(255,255,255,0.5)', paddingLeft: '0.8rem' }}>
+              <strong style={{ fontSize: '0.95rem' }}>🥃 Pijalnia Wódki i Piwa</strong>
+              <p style={{ margin: '0.3rem 0 0 0', fontSize: '0.85rem', opacity: 0.9 }}>
+                Ambiance locale & pas cher — Parfait pour goûter les vodkas polonaises
+              </p>
+            </div>
+            <div style={{ borderLeft: '3px solid rgba(255,255,255,0.5)', paddingLeft: '0.8rem' }}>
+              <strong style={{ fontSize: '0.95rem' }}>🌃 Level 27 Rooftop</strong>
+              <p style={{ margin: '0.3rem 0 0 0', fontSize: '0.85rem', opacity: 0.9 }}>
+                Vue panoramique + DJ — Idéal pour une soirée avec vue
+              </p>
+            </div>
+          </div>
+
+          <p style={{ marginTop: '1rem', fontSize: '0.9rem' }}>
+            <strong>🎯 Quartiers à privilégier :</strong><br/>
+            • Vieille Ville (Stare Miasto)<br/>
+            • Nowy Świat<br/>
+            • Mazowiecka (rue très festive)
+          </p>
+        </div>
+
+        {/* Vélos le long de la Vistule */}
+        <div style={{
+          background: 'rgba(255,255,255,0.1)',
+          padding: '1.5rem',
+          borderRadius: '12px',
+          backdropFilter: 'blur(10px)',
+          marginTop: '1.5rem'
+        }}>
+          <h3 style={{ margin: '0 0 1rem 0', fontSize: '1.2rem' }}>
+            🚴 Vélos le long de la Vistule
+          </h3>
+          <p style={{ margin: '0.5rem 0', fontSize: '0.95rem', lineHeight: '1.6' }}>
+            La promenade au bord de la Vistule (Wisła) est super agréable ! Louez des vélos et profitez des pistes cyclables 
+            qui longent le fleuve avec bars de plage et ambiance chill.
+          </p>
+          <div style={{ marginTop: '1rem', display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
+            <span style={{ fontSize: '0.9rem' }}>🌊 Pistes cyclables aménagées</span>
+            <span style={{ fontSize: '0.9rem' }}>🏖️ Bars de plage l'été</span>
+            <span style={{ fontSize: '0.9rem' }}>☀️ Parfait en journée</span>
+          </div>
+        </div>
+
+        {/* Dégustation spécialités polonaises */}
+        <div style={{
+          background: 'rgba(255,255,255,0.1)',
+          padding: '1.5rem',
+          borderRadius: '12px',
+          backdropFilter: 'blur(10px)',
+          marginTop: '1.5rem'
+        }}>
+          <h3 style={{ margin: '0 0 1rem 0', fontSize: '1.2rem' }}>
+            🥟 Dégustation de Spécialités Polonaises
+          </h3>
+          <p style={{ margin: '0.5rem 0', fontSize: '0.95rem', lineHeight: '1.6' }}>
+            Réservez une table pour goûter plusieurs plats typiques à partager : pierogi (raviolis), żurek (soupe aigre), bigos (choucroute).
+          </p>
+          
+          <div style={{ marginTop: '1rem', display: 'grid', gap: '0.8rem' }}>
+            <div style={{ borderLeft: '3px solid rgba(255,255,255,0.5)', paddingLeft: '0.8rem' }}>
+              <strong style={{ fontSize: '0.95rem' }}>🍽️ Stary Dom</strong>
+              <p style={{ margin: '0.3rem 0 0 0', fontSize: '0.85rem', opacity: 0.9 }}>
+                Cuisine traditionnelle polonaise dans un cadre authentique
+              </p>
+            </div>
+            <div style={{ borderLeft: '3px solid rgba(255,255,255,0.5)', paddingLeft: '0.8rem' }}>
+              <strong style={{ fontSize: '0.95rem' }}>🥟 Zapiecek</strong>
+              <p style={{ margin: '0.3rem 0 0 0', fontSize: '0.85rem', opacity: 0.9 }}>
+                Spécialiste des pierogi — Idéal pour découvrir toutes les variétés
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Croisière sur la Vistule */}
+        <div style={{
+          background: 'rgba(255,255,255,0.1)',
+          padding: '1.5rem',
+          borderRadius: '12px',
+          backdropFilter: 'blur(10px)',
+          marginTop: '1.5rem'
+        }}>
+          <h3 style={{ margin: '0 0 1rem 0', fontSize: '1.2rem' }}>
+            ⛵ Croisière sur la Vistule
+          </h3>
+          <p style={{ margin: '0.5rem 0', fontSize: '0.95rem', lineHeight: '1.6' }}>
+            Balade en bateau avec vue sur la skyline + ambiance chill. Il existe des croisières avec musique et boissons 
+            parfaites pour les groupes, surtout au printemps et en été.
+          </p>
+          <div style={{ marginTop: '1rem', display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
+            <span style={{ fontSize: '0.9rem' }}>🌅 Vue sur la skyline</span>
+            <span style={{ fontSize: '0.9rem' }}>🎵 Croisières avec musique</span>
+            <span style={{ fontSize: '0.9rem' }}>🍹 Option boissons</span>
+          </div>
+        </div>
       </section>
 
       {/* Carte de tous les lieux */}
