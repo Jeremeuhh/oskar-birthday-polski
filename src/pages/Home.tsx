@@ -475,7 +475,7 @@ export default function Home() {
             ✅ <strong>VICTOR</strong>
           </div>
           <div style={{ background: 'rgba(255,255,255,0.1)', padding: '1rem', borderRadius: '8px' }}>
-            ~ <strong>AXEL</strong>
+            ❌ <strong>AXEL</strong>
           </div>
           <div style={{ background: 'rgba(255,255,255,0.1)', padding: '1rem', borderRadius: '8px' }}>
             ✅ <strong>TIWAN</strong>
@@ -490,7 +490,7 @@ export default function Home() {
             ~ <strong>MAXENCE</strong>
           </div>
           <div style={{ background: 'rgba(255,255,255,0.1)', padding: '1rem', borderRadius: '8px' }}>
-            ~ <strong>MILAN</strong>
+            ✅ <strong>MILAN</strong>
           </div>
           <div style={{ background: 'rgba(255,255,255,0.1)', padding: '1rem', borderRadius: '8px' }}>
             ~ <strong>MATHIS</strong>
@@ -508,7 +508,7 @@ export default function Home() {
             ~ <strong>CESAR</strong>
           </div>
           <div style={{ background: 'rgba(255,255,255,0.1)', padding: '1rem', borderRadius: '8px' }}>
-            ~ <strong>KEVIN</strong>
+            ✅ <strong>KEVIN</strong>
           </div>
         </div>
         <p style={{ marginTop: '1.5rem', textAlign: 'center', fontSize: '0.95rem', opacity: 0.9 }}>
