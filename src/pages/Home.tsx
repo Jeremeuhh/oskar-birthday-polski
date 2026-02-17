@@ -463,10 +463,10 @@ export default function Home() {
             ✅ <strong>ANIL</strong>
           </div>
           <div style={{ background: 'rgba(255,255,255,0.1)', padding: '1rem', borderRadius: '8px' }}>
-            ~ <strong>THOMAS</strong>
+            ❌ <strong>THOMAS</strong>
           </div>
           <div style={{ background: 'rgba(255,255,255,0.1)', padding: '1rem', borderRadius: '8px' }}>
-            ~ <strong>AURELIEN G</strong>
+            ❌ <strong>AURELIEN G</strong>
           </div>
           <div style={{ background: 'rgba(255,255,255,0.1)', padding: '1rem', borderRadius: '8px' }}>
             ✅ <strong>NATHAN</strong>
